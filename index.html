@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AFUSTA Student Hub - Past Questions & PDFs</title>
+<style>
+body{margin:0;font-family:Arial;background:#f5f7fb;color:#222}
+header{background:#0a1931;color:white;padding:20px;text-align:center}
+header h1{margin:0;font-size:24px}
+header p{margin:5px 0 0;opacity:0.9}
+.search-box{max-width:600px;margin:-25px auto 20px;background:white;padding:15px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);display:flex;gap:10px}
+.search-box input{flex:1;padding:12px;border:1px solid #ddd;border-radius:8px}
+.search-box button{padding:12px 20px;background:#0a1931;color:white;border:none;border-radius:8px}
+.container{max-width:1000px;margin:auto;padding:15px}
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.card{background:white;padding:20px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);text-align:center}
+.card h3{margin:10px 0 5px}
+.card p{font-size:13px;color:#666}
+.btn{display:inline-block;margin-top:10px;padding:10px 15px;background:#0a1931;color:white;text-decoration:none;border-radius:8px;font-size:13px}
+.section-title{margin:30px 0 10px;font-size:18px;font-weight:bold}
+.list{background:white;border-radius:12px;padding:10px}
+.list-item{display:flex;justify-content:space-between;padding:12px;border-bottom:1px solid #eee}
+.list-item:last-child{border:none}
+.upload-box{background:#ffcc00;padding:20px;border-radius:12px;text-align:center;margin-top:30px}
+@media(max-width:600px){.card-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>AFUSTA STUDENT HUB</h1>
+<p>Course PDFs, Past Questions & Assignments - Daura</p>
+</header>
+
+<div class="search-box">
+<input type="text" id="search" placeholder="Search course e.g. CSC 302, MTH 101...">
+<button onclick="alert('Search working! Type CSC 302')">Search</button>
+</div>
+
+<div class="container">
+
+<div class="section-title">📚 Departments</div>
+<div class="card-grid">
+<div class="card">
+<h3>💻 Computer Science</h3>
+<p>CSC 101, 201, 302 etc</p>
+<a class="btn" href="#cs">View Materials</a>
+</div>
+<div class="card">
+<h3>🔬 Microbiology</h3>
+<p>MCB Past Questions</p>
+<a class="btn" href="#cs">View Materials</a>
+</div>
+<div class="card">
+<h3>📊 Math / Stats</h3>
+<p>MTH, STA PDFs</p>
+<a class="btn" href="#cs">View Materials</a>
+</div>
+<div class="card">
+<h3>📝 General Studies</h3>
+<p>GST 101, 102</p>
+<a class="btn" href="#cs">View Materials</a>
+</div>
+</div>
+
+<div class="section-title" id="cs">🔥 Latest Uploads - CSC 302</div>
+<div class="list">
+<div class="list-item">
+<span>📄 CSC 302 CA Test - OOP Questions</span>
+<a href="#">Download</a>
+</div>
+<div class="list-item">
+<span>📄 CSC 302 Past Question 2024</span>
+<a href="#">Download</a>
+</div>
+<div class="list-item">
+<span>📄 Compiler Design Exercise G1-G4</span>
+<a href="#">Download</a>
+</div>
+<div class="list-item">
+<span>📄 Java Method Overloading Example PDF</span>
+<a href="#">Download</a>
+</div>
+</div>
+
+<div class="upload-box">
+<h3>Do you have Past Questions?</h3>
+<p>Share to help other AFUSTA students and get popular!</p>
+<a href="https://wa.me/234000000000" style="background:black;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;display:inline-block;margin-top:10px;">Send on WhatsApp</a>
+</div>
+
+<div class="section-title">💰 How This Site Will Make You Money</div>
+<div class="list">
+<div class="list-item">1. Put Google AdSense - you earn when students view</div>
+<div class="list-item">2. Charge N200 for premium past questions</div>
+<div class="list-item">3. Do assignment for juniors and link your WhatsApp</div>
+</div>
+
+</div>
+
+<script>
+// Simple search filter
+document.getElementById('search').addEventListener('keyup', function() {
+  let filter = this.value.toLowerCase();
+  let items = document.querySelectorAll('.list-item');
+  items.forEach(function(item){
+    item.style.display = item.textContent.toLowerCase().includes(filter) ? 'flex' : 'none';
+  });
+});
+</script>
+
+</body>
+</html>
